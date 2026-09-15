@@ -1,0 +1,97 @@
+{
+  "project_context": {
+    "name": "Atties",
+    "description": "AI web designing startup landing page",
+    "reference_style": "MindMarket (mindmarket.com) - High-contrast, bold typography, brutalist structural elements",
+    "brand_logo": "Bold yellow block-letter 'ATTIES' with pink/purple outline on dark background, tagline 'AI WEB DESIGNERS'",
+    "vibe": "Electric & Neon, Neo-Brutalism, Disruption, High-Energy",
+    "theme": "dark"
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Unbounded or Cabinet Grotesk (Wide Display Sans - highly structural and modern)",
+      "body": "JetBrains Mono or Space Mono (Adds a developer/tech edge)"
+    },
+    "rules": [
+      "BANNED: Inter, Roboto, Open Sans, Lato for headings.",
+      "H1 must be clamped and massive (e.g., text-5xl md:text-7xl) with tracking-tighter.",
+      "Never center-align paragraphs or dense content; strictly left-align.",
+      "Use ALL CAPS with wide tracking (tracking-[0.2em]) for overlines and tiny labels."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "foreground": "#FAFAFA",
+      "primary": "#FACC15",
+      "primary_foreground": "#050505",
+      "accent": "#E879F9",
+      "accent_foreground": "#050505",
+      "border": "#27272A"
+    },
+    "rules": [
+      "No pure black #000000 - use the tinted void black #050505.",
+      "CRITICAL: DO NOT use complete transparent background in header, overlays, or any surface that has content under it. Always use bg-black/80 with backdrop-blur-xl.",
+      "Hover states MUST have explicitly higher contrast colors defined (e.g., hover:bg-yellow-400 hover:text-black)."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": "Grid Borders & Retro-Futurism. Make the grid visible using border-collapse style layouts with 1px border-white/10.",
+    "shadows": "Avoid soft/blurred shadows. Use hard offset neo-brutalist shadows (e.g., shadow-[4px_4px_0px_#FACC15]) on interactive buttons and cards.",
+    "textures": "Integrate a subtle noise/grain overlay fixed over the background to remove digital flatness."
+  },
+  "layouts": {
+    "spacing": "Generous Spacing Philosophy: Use 2-3x typical spacing (py-24, gap-12). Prioritize breathing room.",
+    "header": "Sticky nav (z-50) with backdrop-blur-xl and bg-black/80. Never hide links completely behind a hamburger on desktop.",
+    "hero_section": "Full-bleed asymmetrical layout. Massive typography (H1). Overlay the background image with bg-black/50 (never darker, never fully opaque).",
+    "process_section": "Mode A: The Tetris Grid. For the 4 steps (1. Brief, 2. Generate, 3. Rehearse, 4. Launch). Map them onto an asymmetric grid (e.g., col-span-8, col-span-4). Do not use equal sized boxes.",
+    "pricing_section": "High contrast structural card for the ₹10,000 to ₹15,000 INR plan. Implement the 'Tracing Beam' style or a neon border.",
+    "contact_section": "Solid functional grid. Massive typography for the email (samakung008@gmail.com) and phone (+917078415026). Make it impossible to miss."
+  },
+  "motion": {
+    "rules": [
+      "Respect prefers-reduced-motion.",
+      "Use framer-motion for scroll reveals and staggered grid entry.",
+      "Use specific transitions (e.g., transition: transform 0.2s ease). NEVER use 'transition: all'."
+    ]
+  },
+  "components_path": {
+    "ui": "/app/frontend/src/components/ui/",
+    "pages": "/app/frontend/src/pages/"
+  },
+  "instructions_to_main_agent": [
+    "Install required dependencies: yarn add framer-motion @phosphor-icons/react lucide-react clsx tailwind-merge",
+    "Use pure HTML/Tailwind (.jsx/.js) for structural marketing layouts rather than wrapping everything in Shadcn cards.",
+    "For the components, you are working with .js / .jsx files, NOT .tsx. Adapt your imports and syntax accordingly.",
+    "In App.css or index.css, ensure the font-families are correctly imported and mapped.",
+    "In Tailwind config, extend the colors to match the palette provided."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic outputs. Avoid 'AI slop'. Make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "You MUST NOT apply universal transition (transition: all). This results in breaking transforms.",
+    "You MUST NOT center align the app container in App.css (no text-align: center).",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ],
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1764258560295-21e74c3d0d15?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMG5lb24lMjAzZCUyMGFydCUyMHllbGxvdyUyMHBpbmslMjBkYXJrfGVufDB8fHx8MTc4NzczNjY4NXww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract neon lines in purple and yellow on black",
+      "placement": "Hero section background with bg-black/50 overlay"
+    },
+    "process_accents": {
+      "url": "https://images.unsplash.com/photo-1764258560286-b3aa856c8ff0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMG5lb24lMjAzZCUyMGFydCUyMHllbGxvdyUyMHBpbmslMjBkYXJrfGVufDB8fHx8MTc4NzczNjY4NXww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract glowing lines of yellow and pink",
+      "placement": "Background visual for Process or Pricing sections"
+    },
+    "team_brief": {
+      "url": "https://images.pexels.com/photos/39190570/pexels-photo-39190570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Top view of diverse creative team collaborating",
+      "placement": "Visual for '1. Brief' step"
+    }
+  }
+}
